@@ -1,5 +1,10 @@
 <template>
   <a2k-window id="portfolio" draggable="" heading="Portfolio" x="400" y="200">
-    <iframe src="/Resume.pdf" style="min-height: 65vh"></iframe>
+    <embed
+      src="https://samnicklez.github.io/retro-portfolio/Resume.pdf"
+      type="application/pdf"
+      class="application/pdf"
+      style="min-height: 65vh"
+    ></embed>
   </a2k-window>
 </template>
