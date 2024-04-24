@@ -64,17 +64,16 @@ export default {
           rating: 5,
           url: 'https://youtu.be/Zy4KtD98S2c?si=oVW39Dv1lmU09EmD'
         }
-        // Add more songs as needed
       ],
-      selectedRow: null // Tracks the currently selected row ID
+      selectedRow: null
     }
   },
   methods: {
     selectRow(songId) {
-      this.selectedRow = songId // Set or toggle the selected row based on song ID
+      this.selectedRow = songId
     },
     openSongUrl(url) {
-      window.open(url, '_blank') // Opens the song URL in a new tab
+      window.open(url, '_blank')
     }
   }
 }
@@ -117,8 +116,8 @@ img {
 }
 
 .selected {
-  background-color: #007bff; /* Blue color for selected row */
-  color: white; /* Optional: change text color for better readability */
+  background-color: #007bff;
+  color: white;
 }
 
 .music-list::-webkit-scrollbar {
