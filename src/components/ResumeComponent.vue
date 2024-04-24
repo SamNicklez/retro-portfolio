@@ -5,6 +5,6 @@
       type="application/pdf"
       class="application/pdf"
       style="min-height: 65vh"
-    ></embed>
+    />
   </a2k-window>
 </template>

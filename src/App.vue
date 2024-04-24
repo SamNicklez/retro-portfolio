@@ -11,7 +11,6 @@ import { markRaw } from 'vue'
 import MobileComponent from './components/MobileComponent.vue'
 import DesktopComponent from './components/DesktopComponent.vue'
 import NavComponent from './components/NavComponent.vue'
-
 let DesktopComponentRaw = markRaw(DesktopComponent)
 
 const isMobile = window.innerWidth <= 768
@@ -41,12 +40,12 @@ body,
   display: flex;
   flex-direction: column;
 }
-
 #NavComponent {
   margin-top: auto;
   margin-bottom: 0;
   width: 100%;
-  height: 60px;
+  height: 40px;
+  overflow: hidden;
 }
 
 @keyframes expand {
