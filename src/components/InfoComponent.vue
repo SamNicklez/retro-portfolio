@@ -1,5 +1,5 @@
 <template>
-  <a2k-window id="info" draggable="" heading="About Nicklaus2000" x="400" y="200">
+  <a2k-window id="info" draggable="" heading="About Nicklaus2000" x="300" y="50">
     <h2>About This Project</h2>
     <p>
       Welcome to my online portfolio, a retro Windows 2000 themed website used to host some

@@ -1,6 +1,5 @@
 <template>
   <div style="background: var(--desktop-background); height: calc(100vh - 40px)">
-    <WelcomeWindowComponent />
     <ResumeComponent v-show="portfolioBool" @click="handleClickPortfolio($event)" />
     <AboutMeComponent v-show="aboutBool" @click="handleClickAbout($event)" />
     <InfoComponent v-show="infoBool" @click="handleClickInfo($event)" />
@@ -24,7 +23,6 @@
 import ResumeComponent from './ResumeComponent.vue'
 import AboutMeComponent from './AboutMeComponent.vue'
 import InfoComponent from './InfoComponent.vue'
-import WelcomeWindowComponent from './WelcomeWindowComponent.vue'
 import StartButtonContentComponent from './StartButtonContentComponent.vue'
 import MusicComponent from './MusicComponent.vue'
 export default {
@@ -32,7 +30,6 @@ export default {
     ResumeComponent,
     AboutMeComponent,
     InfoComponent,
-    WelcomeWindowComponent,
     StartButtonContentComponent,
     MusicComponent
   },
