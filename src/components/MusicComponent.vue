@@ -1,7 +1,12 @@
 <template>
-  <a2k-window id="music" draggable heading="Music" x="300" y="175">
+  <a2k-window id="music" draggable heading="Music" x="300" y="0">
     <div class="music-list">
-      <h1>My Music</h1>
+      <h1>
+        A Collection of Live Music<img
+          src="/public/fireemoji.png"
+          style="min-width: 50px; align-self: baseline"
+        />
+      </h1>
       <p>Double click to listen!</p>
       <div class="table-header">
         <div class="column">Name</div>
@@ -48,6 +53,15 @@ export default {
         },
         {
           id: 2,
+          name: 'Nurture Live',
+          artist: 'Porter Robinson',
+          year: 2021,
+          length: '1:41:19',
+          rating: 5,
+          url: 'https://youtu.be/qMc-4GsuXJc?si=wnu1zmIl84qtVNQv'
+        },
+        {
+          id: 3,
           name: 'SUBJOHNICS',
           artist: 'Subtronics, John Summit',
           year: 2023,
@@ -56,13 +70,58 @@ export default {
           url: 'https://youtu.be/kuJVbpaFuXs?si=L0viiaXito2scvMT'
         },
         {
-          id: 3,
+          id: 4,
           name: 'Live from Joshua Tree',
           artist: 'RÜFÜS DU SOL',
           year: 2020,
           length: '45:44',
           rating: 5,
           url: 'https://youtu.be/Zy4KtD98S2c?si=oVW39Dv1lmU09EmD'
+        },
+        {
+          id: 5,
+          name: 'Liquicity Prague Set',
+          artist: 'Fox Stevenson',
+          year: 2021,
+          length: '1:15:31',
+          rating: 5,
+          url: 'https://youtu.be/ymXNY-km7Is?si=IY7bFrVI1vAO_poH'
+        },
+        {
+          id: 6,
+          name: 'Corona Capital CDMX Set',
+          artist: 'Roosevelt',
+          year: 2023,
+          length: '52:56',
+          rating: 3,
+          url: 'https://youtu.be/GIVjvngCWMo?si=z0Sksj1sHmQQF8aX'
+        },
+        {
+          id: 7,
+          name: 'Live at Lowlands',
+          artist: 'Franc Moody',
+          year: 2023,
+          length: '57:09',
+          rating: 2,
+          url: 'https://youtu.be/p9XD2pDk4Gs?si=GI8THl-f4D8r51Pe'
+        },
+        {
+          id: 8,
+          name: 'Live at Life is Beautiful Festival',
+          artist: 'Surfaces',
+          year: 2021,
+          length: '46:59',
+          rating: 2,
+          url: 'https://youtu.be/vhkW4QvWg0o?si=xG7FirBBbFdXzG9R'
+        },
+        {
+          id: 9,
+          name: 'Reeperbahn Festival Live',
+          artist: 'Parcels',
+          year: 2018,
+          length: '46:42',
+          rating: 4,
+          url: 'https://youtu.be/DY-7adE4EVM?si=NoMtIl0S2LkoAeYU'
         }
       ],
       selectedRow: null
@@ -74,6 +133,22 @@ export default {
     },
     openSongUrl(url) {
       window.open(url, '_blank')
+    }
+  },
+  created() {
+    let currentIndex = this.songs.length
+
+    // While there remain elements to shuffle...
+    while (currentIndex != 0) {
+      // Pick a remaining element...
+      let randomIndex = Math.floor(Math.random() * currentIndex)
+      currentIndex--
+
+      // And swap it with the current element.
+      ;[this.songs[currentIndex], this.songs[randomIndex]] = [
+        this.songs[randomIndex],
+        this.songs[currentIndex]
+      ]
     }
   }
 }
