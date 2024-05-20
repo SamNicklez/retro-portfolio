@@ -4,9 +4,9 @@ import { fileURLToPath, URL } from 'node:url'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: 'https://samnicklez.github.io/retro-portfolio/',
-  publicPath: '/retro-portfolio/',
-  baseUrl: '/retro-portfolio/',
+  base: 'https://samnicklez.github.io/windows2000-portfolio-website/',
+  publicPath: '/windows2000-portfolio-website/',
+  baseUrl: '/windows2000-portfolio-website/',
   plugins: [
     vue({
       template: {
