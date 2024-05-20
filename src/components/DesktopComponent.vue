@@ -23,14 +23,12 @@
 import ResumeComponent from './ResumeComponent.vue'
 import AboutMeComponent from './AboutMeComponent.vue'
 import InfoComponent from './InfoComponent.vue'
-import StartButtonContentComponent from './StartButtonContentComponent.vue'
 import MusicComponent from './MusicComponent.vue'
 export default {
   components: {
     ResumeComponent,
     AboutMeComponent,
     InfoComponent,
-    StartButtonContentComponent,
     MusicComponent
   },
   name: 'DesktopComponent',
@@ -56,7 +54,6 @@ export default {
       this.aboutBool = true
     },
     handleClickPortfolio(event) {
-      console.log('here')
       if (event.originalTarget.outerHTML == '<a2k-window-actions></a2k-window-actions>') {
         this.portfolioBool = false
       }
